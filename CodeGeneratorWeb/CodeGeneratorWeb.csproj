@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <Folder Include="Files" />
+      <Folder Include="gitImages" />
       <Folder Include="Pages" />
     </ItemGroup>
 
