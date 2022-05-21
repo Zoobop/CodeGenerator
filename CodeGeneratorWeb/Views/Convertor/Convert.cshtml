@@ -1,0 +1,33 @@
+﻿@using static LanguageConvertor.Core.ConvertibleLanguage
+@model ConversionInputModel
+
+@{
+    ViewBag.Title = "Convert";
+    Layout = "_Layout";
+}
+
+<div class="container align-content-center">
+    <h1 class="display-1 text-center">Convert From File</h1>
+    <h4 class="text-center">Please select the file or files to convert and the conversion language.</h4>
+    <br/>
+    <form method="post" enctype="multipart/form-data" asp-controller="Convertor" asp-action="Convert">
+        <div class="form-group text-center">
+            <h2>File(s) To Convert</h2>
+            <input asp-for="File" type="file" class="align-content-center text-center" style="padding-left: 8%" id="files" name="files" accept=".cs" multiple="multiple" required/>
+        </div>
+        <br/>
+        <div class="form-group text-center">
+            <h2>Language</h2>
+            <select asp-for="Language" id="language" class="bg-dull">
+                <option value="@Java">Java</option>
+                <option value="@Cpp">C++</option>
+            </select>
+        </div>
+        <br/>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary btn-lg btn-dark text-dark" style="width: 30%" id="convert" value="Convert"/>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg btn-dark text-dark" style="width: 30%" id="back">Back</a>
+        </div>
+        <br/>
+    </form>
+</div>

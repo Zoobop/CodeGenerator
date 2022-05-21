@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Files";
+    Layout = "_Layout";
+}
+
+<div class="container align-content-center">
+    <h1 class="display-1 text-center">Download Your Files</h1>
+    <h4 class="text-center">Choose the converted files you want to download.</h4>
+    <br/>
+    <form method="post" enctype="multipart/form-data" asp-controller="Convertor" asp-action="Convert">
+        <br/>
+        <table>
+            <thead class="align-content-center">
+                <tr>
+                    <th colspan="2" class="bg-dull">Converted Files</th>
+                </tr>
+            </thead>
+            <tbody class="align-self-auto">
+                <tr>
+                    <td class="bg-dull">File</td>
+                    <td class="bg-dull">Link</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <div class="text-center">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg btn-dark text-dark" style="width: 30%" id="back">Back</a>
+        </div>
+        <br/>
+    </form>
+</div>

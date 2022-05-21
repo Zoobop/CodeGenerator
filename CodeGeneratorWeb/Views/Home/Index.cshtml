@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1 class="display-1">Translate Your C# Code!</h1>
+    <br/>
+    <h2 class="display-6">Here, you can write your own C# code or upload C# files that formats into your choice of the available languages. Code translation/generation covers the simple formating of each language and not the full extent.</h2>
+    <br/>
+    <h3>Click <a asp-action="ConvertedFiles">HERE</a> to go to your converted files.</h3>
+    <br/>
+    <a class="btn btn-primary btn-lg btn-dark text-dark" style="width: 30%" asp-controller="Convertor" asp-action="Convert">Convert</a>
+    <a class="btn btn-primary btn-lg btn-dark text-dark" style="width: 30%" asp-controller="Generation" asp-action="Generate">Generate</a>
+    <br/>
+    <br/>
+    </div>

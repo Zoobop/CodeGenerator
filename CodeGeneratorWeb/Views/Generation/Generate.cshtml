@@ -1,0 +1,48 @@
+﻿@using static LanguageConvertor.Core.ConvertibleLanguage;
+@model CodeGeneratorWeb.Models.GenerationModel
+
+@{
+    ViewBag.Title = "Generate";
+    Layout = "_Layout";
+}
+
+<style>
+    .box {
+      background: #184e8e linear-gradient(135deg, #172a74, #21a9af);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+</style>
+
+<div class="box align-content-center">
+    <h1 class="display-1 text-center">Generate File</h1>
+    <h4 class="text-center">Please select a conversion language and write your C# code in the text area below.</h4>
+    <form method="post" enctype="multipart/form-data" asp-controller="Generation" asp-action="Generate">
+        <div class="form-group text-center">
+            <h2>Language</h2>
+            <select asp-for="Language" id="language" class="bg-dull">
+                <option value="@Java">Java</option>
+                <option value="@Cpp">C++</option>
+            </select>
+        </div>
+        <div class="container align-content-center">
+            <ul class="list-group-horizontal-xxl align-content-center">
+                @{
+                    var inputCode = string.Empty;
+                    <div class="col">
+                        <textarea class="code bg-dull" style="resize: none; font-size: 10pt" rows="28" cols="79" placeholder="Write C# code here..." required asp-for="@inputCode"></textarea>
+                        <textarea class="code bg-dull" style="resize: none; font-size: 10pt" rows="28" cols="79" placeholder="Generated code will be here..." readonly="readonly" id="generatedCode" value="@inputCode"></textarea>
+                    </div>
+                }
+            </ul>
+        </div>
+        <br/>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary btn-lg btn-dark text-dark" style="width: 10%" id="generate" value="Generate"/>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg btn-dark text-dark" style="width: 10%" id="back">Back</a>
+        </div>
+        <br/>
+    </form>
+</div>
