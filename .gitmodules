@@ -1,0 +1,3 @@
+[submodule "LanguageConvertor"]
+	path = LanguageConvertor
+	url = https://github.com/Zoobop/LanguageConvertor
