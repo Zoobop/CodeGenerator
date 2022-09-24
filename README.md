@@ -9,7 +9,7 @@ This project example was created for the purpose of testing and showcasing the L
 
 The home page provides access to the two main features of the project:
 - Convert From File(s)
-- Real-Time Language Translation
+- In-App Language Translation
 
 ## File Conversion
 ![File Conversion](https://github.com/Zoobop/CodeGenerator/blob/master/gitImages/Convert.png "File Convert")
