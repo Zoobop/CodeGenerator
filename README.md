@@ -13,6 +13,3 @@ The home page provides access to the two main features of the project:
 
 ## File Conversion
 ![File Conversion](https://github.com/Zoobop/CodeGenerator/blob/master/gitImages/Convert.png "File Convert")
-
-## Real-Time Translation
-![Real-Time Translation](https://github.com/Zoobop/CodeGenerator/blob/master/gitImages/Generate.png "Real-Time Translation")
